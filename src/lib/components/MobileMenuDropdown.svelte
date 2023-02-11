@@ -1,6 +1,6 @@
 <script lang="ts">
 	export const clickFocus = false;
-	export const menuItems = {
+	export let menuItems = {
 		name: 'Exemplo de itens',
 		items: [
 			{
@@ -14,3 +14,19 @@
 		]
 	};
 </script>
+
+
+<div class="collapse collapse-arrow transtiion-all transition-[2s]">
+	<input type="checkbox" /> 
+	<div class="collapse-title font-medium">
+	  {menuItems.name}
+	</div>
+	<div class="collapse-content"> 
+	  <ul class=" menu menu-vertical">
+		{#each menuItems.items as item}
+			<li><a href={item.link}>{item.name}</a></li>
+		{/each}
+
+	  </ul>
+	</div>
+  </div>
