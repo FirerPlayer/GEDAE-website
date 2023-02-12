@@ -9,7 +9,7 @@
 
 <button
 	class={`btn btn-circle ring-1 mx-1 ${
-		themeToggle ? 'bg-white hover:bg-neutral-300' : ' bg-blue-700 hover:bg-blue-900'
+		!themeToggle ? 'bg-white hover:bg-neutral-300' : ' bg-blue-700 hover:bg-blue-900'
 	}`}
 	on:click={() => {
 		themeToggle = !themeToggle;
