@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import { page } from '$app/stores';
 	import logo from '../lib/assets/logo.png';
 	import DropdownMenuItem from '$lib/components/DropdownMenuItem.svelte';
 	import MobileMenuDropdown from '$lib/components/MobileMenuDropdown.svelte';
@@ -7,39 +8,7 @@
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { browser } from '$app/environment';
-	import ThemeButton from '$lib/components/ThemeButton.svelte';
-	export let title = 'My App';
-	const themes = [
-		// 'light',
-		// 'dark',
-		// 'cupcake',
-		// 'bumblebee',
-		// 'emerald',
-		// 'corporate',
-		// 'synthwave',
-		// 'retro',
-		// 'cyberpunk',
-		// 'valentine',
-		// 'halloween',
-		// 'garden',
-		// 'forest',
-		// 'aqua',
-		// 'lofi',
-		// 'pastel',
-		// 'fantasy',
-		// 'wireframe',
-		// 'black',
-		// 'luxury',
-		// 'dracula',
-		// 'cmyk',
-		// 'autumn',
-		// 'business',
-		// 'acid',
-		// 'lemonade',
-		'night',
-		// 'coffee',
-		'winter'
-	];
+	export let title = `GEDAE | ${$page.route.id === '/' ? 'Home' : $page.route.id}`;
 	const dropEstrutura = {
 		name: 'Estrutura',
 		items: [
@@ -82,7 +51,7 @@
 	const menuItems = [
 		{
 			name: 'Quem somos',
-			link: '#'
+			link: '/about'
 		}
 	];
 	let logoHorvered: boolean = false;
@@ -125,7 +94,7 @@
 					</label>
 				</div>
 				<div class="navbar-center">
-					<img src={logo} alt="" class="h-16" />
+					<a href="/"><img src={logo} alt="" class="h-16" /></a>
 				</div>
 			</div>
 			<slot />
@@ -159,10 +128,10 @@
 							logoHorvered = false;
 						}}
 					>
-						<img src={logo} alt="" class="h-24 pt-1 pl-1 z-10" />
+						<a href="/"><img src={logo} alt="" class="h-24 pt-1 pl-1" /></a>
 						{#if logoHorvered}
 							<div
-								class="block h-fit w-fit text-xl text-white border-l-4 border-l-white"
+								class="h-fit w-fit text-xl text-white border-l-4 border-l-white"
 								transition:fly={{ duration: 650, x: -102, y: 0, easing: quintOut }}
 							>
 								<div class="bg-red-600 w-fit h-8 px-1">Grupo de</div>
@@ -186,7 +155,7 @@
 					</ul>
 				</div>
 			</div>
-			<slot />
+			<div class=" min-h-[400px]"><slot /></div>
 			<Footer />
 		</div>
 	</div>

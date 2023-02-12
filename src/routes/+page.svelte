@@ -27,7 +27,6 @@
 		}
 	];
 
-	// news={{ title: '', content: 'Ex', date: new Date(), image: '', link: '' }}
 	const exampleNews = newsContent.map((item, i) => {
 		return {
 			title: item.title,
@@ -55,21 +54,6 @@
 	</div>
 </div>
 
-<!-- <div
-	class="bg-cover bg-center min-h-[400px] md:min-h-screen flex flex-col items-end p-2 md:p-4"
-	style="background-image: url(https://gedae.ufpa.br/images/Imagens/Membros/equipe_gedae.png);"
->
-	<div class=" h-full w-full" />
-	<div class=" text-right text-neutral-content ring-4">
-		<div class="max-w-md ">
-			<h1 class="mb-0.5 md:mb-5 text-xl md:text-5xl font-bold">GEDAE</h1>
-			<p class="mb-5 text-sm md:text-base ring-4">
-				Desenvolvimento de tecnologias de baixo custo para atendimento de energia elétrica a
-				pequenas e médias cargas, com o uso de energias renováveis
-			</p>
-		</div>
-	</div>
-</div> -->
 <div class="flex flex-col items-center md:pt-4 shadow-inner-xl">
 	<div class="divider" />
 	<div class="text-lg md:text-4xl font-bold text-base-content">NOTÍCIAS</div>
