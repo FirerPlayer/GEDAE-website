@@ -40,27 +40,43 @@
 </script>
 
 <div
-	class="bg-cover bg-center min-h-[400px] md:min-h-screen"
+	class="hero items-start md:items-end min-h-[400px] md:min-h-screen"
 	style="background-image: url(https://gedae.ufpa.br/images/Imagens/Membros/equipe_gedae.png);"
 >
-	<div class="bg-black h-full w-full bg-opacity-60 flex flex-col items-end p-2 md:p-4">
-		<div class=" text-right text-neutral-content">
-			<div class="max-w-md ">
-				<h1 class="mb-0.5 md:mb-5 text-xl md:text-5xl font-bold">GEDAE</h1>
-				<p class="mb-5 text-sm md:text-base">
-					Desenvolvimento de tecnologias de baixo custo para atendimento de energia elétrica a
-					pequenas e médias cargas, com o uso de energias renováveis
-				</p>
-			</div>
+	<div class="hero-overlay bg-opacity-60" />
+	<div class="hero-content text-right text-neutral-content justify-self-end">
+		<div class="max-w-md">
+			<h1 class="mb-0.5 md:mb-5 text-xl md:text-5xl font-bold">GEDAE</h1>
+			<p class="mb-5 text-sm md:text-base">
+				Desenvolvimento de tecnologias de baixo custo para atendimento de energia elétrica a
+				pequenas e médias cargas, com o uso de energias renováveis.
+			</p>
 		</div>
 	</div>
 </div>
-<div class="flex flex-col justify-center items-center bg-base-300 md:pt-4">
+
+<!-- <div
+	class="bg-cover bg-center min-h-[400px] md:min-h-screen flex flex-col items-end p-2 md:p-4"
+	style="background-image: url(https://gedae.ufpa.br/images/Imagens/Membros/equipe_gedae.png);"
+>
+	<div class=" h-full w-full" />
+	<div class=" text-right text-neutral-content ring-4">
+		<div class="max-w-md ">
+			<h1 class="mb-0.5 md:mb-5 text-xl md:text-5xl font-bold">GEDAE</h1>
+			<p class="mb-5 text-sm md:text-base ring-4">
+				Desenvolvimento de tecnologias de baixo custo para atendimento de energia elétrica a
+				pequenas e médias cargas, com o uso de energias renováveis
+			</p>
+		</div>
+	</div>
+</div> -->
+<div class="flex flex-col items-center md:pt-4 shadow-inner-xl">
 	<div class="divider" />
 	<div class="text-lg md:text-4xl font-bold text-base-content">NOTÍCIAS</div>
-	<div class="p-4 md:p-12 flex flex-wrap gap-y-8 items-center justify-center md:justify-between">
+	<div class="p-4 md:p-12 flex flex-wrap gap-8  justify-center">
 		{#each exampleNews as news}
 			<NewsCard {news} />
 		{/each}
 	</div>
+	<button class="btn btn-sm md:btn-md mb-4 md:mb-8 mr-8 md:mr-20 self-end">MAIS NOTÍCIAS</button>
 </div>

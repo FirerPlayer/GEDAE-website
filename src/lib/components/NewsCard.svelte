@@ -46,7 +46,7 @@
 	<figure class="bg-base-200 py-2">
 		<img src={news.image ? news.image : g} alt="" class="md:w-full" />
 	</figure>
-	<div class="card-body bg-base-100 ">
+	<div class="card-body bg-primary-content ">
 		<h2 class="card-title">{news.title}</h2>
 		<a href={news.link} class="link">{news.content}</a>
 		<div class="card-actions justify-end">
