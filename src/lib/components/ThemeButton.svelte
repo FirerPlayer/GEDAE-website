@@ -1,10 +1,15 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
+
 	let themeToggle: boolean = false;
+	if (browser) {
+		themeToggle = localStorage.getItem('theme') === 'winter' ? true : false;
+	}
 </script>
 
 <button
 	class={`btn btn-circle ring-1 mx-1 ${
-		!themeToggle ? 'bg-white hover:bg-neutral-300' : ' bg-zinc-700 hover:bg-zinc-900'
+		themeToggle ? 'bg-white hover:bg-neutral-300' : ' bg-blue-700 hover:bg-blue-900'
 	}`}
 	on:click={() => {
 		themeToggle = !themeToggle;
@@ -18,8 +23,8 @@
 			fill="none"
 			viewBox="0 0 24 24"
 			stroke-width="1.5"
-			stroke="white"
-			class="w-6 h-6"
+			stroke="black"
+			class="w-6 h-6 hover:fill-black"
 		>
 			<path
 				stroke-linecap="round"
@@ -33,8 +38,8 @@
 			fill="none"
 			viewBox="0 0 24 24"
 			stroke-width="1.5"
-			stroke="black"
-			class="w-6 h-6"
+			stroke="white"
+			class="w-6 h-6 hover:fill-white"
 		>
 			<path
 				stroke-linecap="round"
