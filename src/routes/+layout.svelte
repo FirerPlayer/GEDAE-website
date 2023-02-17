@@ -52,6 +52,10 @@
 		{
 			name: 'Quem somos',
 			link: '/about'
+		},
+		{
+			name: 'Equipe',
+			link: '/team'
 		}
 	];
 	let logoHorvered: boolean = false;
@@ -62,7 +66,7 @@
 	let isDropdownOpen: boolean = false;
 	const customTransition = () => {
 		return {
-			css: (t: number) => {
+			css: () => {
 				return `
         transform: height;
         `;
