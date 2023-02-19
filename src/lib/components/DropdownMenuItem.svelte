@@ -31,7 +31,7 @@
 	</ul>
 </li>
 
-<style>
+<!-- <style>
 	.glow:hover {
 		--shadow-color: var(--p);
 		box-shadow: inset 0px -1px 0.9px hsl(var(--shadow-color) / 0.11),
@@ -39,4 +39,4 @@
 			inset 0px -6.4px 6px -2.5px hsl(var(--shadow-color) / 0.07),
 			inset 0px -17px 15.9px -3.7px hsl(var(--shadow-color) / 0.06);
 	}
-</style>
+</style> -->
