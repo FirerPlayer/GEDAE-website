@@ -9,6 +9,7 @@
 	import { fly } from 'svelte/transition';
 	import {quintOut } from 'svelte/easing';
 	import { browser } from '$app/environment';
+	import {Menu2} from 'svelte-tabler'
 	export let title = `GEDAE | ${$page.route.id === '/' ? 'Home' : $page.route.id}`;
 	const dropEstrutura = {
 		name: 'Estrutura',
@@ -91,7 +92,7 @@
 
 <!-- svelte-ignore a11y-missing-attribute -->
 {#if isMobile}
-	<div class="navbar bg-base-200 border-b-2 border-base-300 p-0 min-h-fit z-10">
+	<div class="navbar bg-base-200 border-base-300 p-0 min-h-fit z-10">
 		<div class="navbar-start">
 			<a href="/"><img src={logo} alt="" class="h-16" /></a>
 		</div>
@@ -103,18 +104,7 @@
 					isDropdownOpen = !isDropdownOpen;
 				}}
 			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					class="inline-block w-6 h-6 stroke-current"
-					><path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 6h16M4 12h16M4 18h16"
-					/></svg
-				>
+				<Menu2 size="40"/>
 			</div>
 		</div>
 	</div>
