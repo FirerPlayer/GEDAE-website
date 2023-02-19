@@ -5,8 +5,9 @@
 	import DropdownMenuItem from '$lib/components/DropdownMenuItem.svelte';
 	import MobileMenuDropdown from '$lib/components/MobileMenuDropdown.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import {Flask2} from 'svelte-tabler'
 	import { fly } from 'svelte/transition';
-	import { elasticInOut, quintOut } from 'svelte/easing';
+	import {quintOut } from 'svelte/easing';
 	import { browser } from '$app/environment';
 	export let title = `GEDAE | ${$page.route.id === '/' ? 'Home' : $page.route.id}`;
 	const dropEstrutura = {
@@ -14,7 +15,8 @@
 		items: [
 			{
 				name: 'Laboratórios',
-				link: '#'
+				link: '#',
+				icon: Flask2
 			},
 			{
 				name: 'Biblioteca',
@@ -126,7 +128,6 @@
 			{/each}
 			<MobileMenuDropdown menuItems={dropEstrutura} />
 			<MobileMenuDropdown menuItems={dropProjetos} />
-			<!-- <div class="bg-black self-center place-self-start"></div> -->
 		</ul>
 	{/if}
 	<slot />
@@ -145,7 +146,7 @@
 							logoHorvered = false;
 						}}
 					>
-						<a href="/"><img src={logo} alt="" class="h-24 pt-1 pl-1" /></a>
+						<a href="/"><img src={logo} alt="" class="h-24" /></a>
 						{#if logoHorvered}
 							<div
 								class="h-fit w-fit text-xl text-white border-l-4 border-l-white"
@@ -159,13 +160,13 @@
 					</div>
 				</div>
 				<div class="flex-none">
-					<ul class="menu menu-horizontal px-1 flex-none rounded-none">
+					<ul class="menu menu-horizontal flex-shrink border-l-[1px]">
 						{#each menuItems as item}
-							<li class="h-[90px] ">
-								<a class="h-full hover:text-primary hover:shadow-inner" href={item.link}
-									>{item.name}</a
-								>
-							</li>
+							<li class="h-24 border-r-[1px] border-b-[1px] hover:bg-transparent">
+								<a class="h-full hover:text-primary hover:shadow-inner" href={item.link}>
+                  {item.name}
+                </a>
+							</li> 
 						{/each}
 						<DropdownMenuItem menuItems={dropEstrutura} />
 						<DropdownMenuItem menuItems={dropProjetos} />

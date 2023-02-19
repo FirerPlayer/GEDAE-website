@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Flask2 } from 'svelte-tabler';
 	export const clickFocus = false;
 	export let menuItems = {
 		name: 'Exemplo de itens',
@@ -15,18 +16,16 @@
 	};
 </script>
 
-
 <div class="collapse collapse-arrow transtiion-all transition-[2s]">
-	<input type="checkbox" /> 
+	<input type="checkbox" />
 	<div class="collapse-title font-medium">
-	  {menuItems.name}
+		{menuItems.name}
 	</div>
-	<div class="collapse-content"> 
-	  <ul class=" menu menu-vertical">
-		{#each menuItems.items as item}
-			<li><a href={item.link}>{item.name}</a></li>
-		{/each}
-
-	  </ul>
+	<div class="collapse-content">
+		<ul class=" menu menu-vertical">
+			{#each menuItems.items as item}
+				<li><a href={item.link}>{item.name}</a></li>
+			{/each}
+		</ul>
 	</div>
-  </div>
+</div>

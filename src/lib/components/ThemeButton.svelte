@@ -3,18 +3,16 @@
 
 	let themeToggle: boolean = false;
 	if (browser) {
-		themeToggle = localStorage.getItem('theme') === 'winter' ? true : false;
+		themeToggle = localStorage.getItem('theme') === 'jedi-light' ? true : false;
 	}
 </script>
 
 <button
-	class={`btn btn-circle ring-1 mx-1 ${
-		themeToggle ? 'bg-white hover:bg-neutral-300' : ' bg-blue-700 hover:bg-blue-900'
-	}`}
+	class={`btn btn-circle mx-1 border-0 bg-transparent hover:bg-base-300`}
 	on:click={() => {
 		themeToggle = !themeToggle;
 	}}
-	data-toggle-theme="winter,night"
+	data-toggle-theme="jedi-light,jedi-dark"
 	data-act-class="ACTIVECLASS"
 >
 	{#if themeToggle}
