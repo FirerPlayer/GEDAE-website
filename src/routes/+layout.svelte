@@ -152,8 +152,8 @@
 				<div class="flex-none">
 					<ul class="menu menu-horizontal flex-shrink border-l-[1px]">
 						{#each menuItems as item}
-							<li class="h-24 border-r-[1px] border-b-[1px] hover:bg-transparent">
-								<a class="h-full hover:text-primary hover:shadow-inner" href={item.link}>
+							<li class="h-24 border-r-[1px] border-b-[1px]">
+								<a class="h-full hover:text-primary" href={item.link}>
                   {item.name}
                 </a>
 							</li> 
